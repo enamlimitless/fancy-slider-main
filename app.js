@@ -45,7 +45,7 @@ const selectItem = (event, img) => {
   if (item === -1) {
     sliders.push(img);
   } else {
-    alert('Hey, Already added !')
+    //alert('Hey, Already added !')
   }
 }
 var timer
@@ -122,3 +122,11 @@ searchBtn.addEventListener('click', function () {
 sliderBtn.addEventListener('click', function () {
   createSlider()
 })
+
+
+//Problem Solved Working By Keypress 
+document.getElementById("search")
+.addEventListener("keypress", function(event) {
+    if (event.key == 'Enter')
+    document.getElementById("search-btn").click();
+});
