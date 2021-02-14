@@ -1,3 +1,44 @@
+// custom added
+#header{height:7rem;}
+#header .logo a{
+  text-decoration: none;
+  float:left;
+  color:#3B2D64;
+}
+#header .logo h1{font-size:2rem;}
+#header .logo{
+    float:left;
+    margin-top: 1.5rem;
+    
+}
+#header .main-nav{
+  float:right;
+  list-style: none;
+}
+#header .main-nav li{
+  float:left;
+  margin-top: 1.7rem;
+  margin-right: 4rem;
+}
+#header .main-nav li a{
+  text-decoration: none;
+  color: #383838;
+  font-size:1.4rem;
+  font-family: 'Lato', sans-serif;
+ transition:0.3s ease;
+}
+
+
+.clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
+  height: 0;
+}
+
+.wrapper{height:80vh;}
+
+
 #sliders {
   height: 400px;
   width: 60%;
@@ -55,6 +96,7 @@ img {
   display: none;
 }
 
+
 @media (max-width: 767px) {
   .justify-content-around.align-items-center.mt-3.gallery-header.mb-2 {
     flex-direction: column;
@@ -64,3 +106,5 @@ img {
     width: 90%;
   }
 }
+
+

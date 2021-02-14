@@ -39,14 +39,14 @@ const getImages = (query) => {
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
-  // Problem Solved Selecting Image Toggle
-  element.classList.toggle('added');
- 
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
+    element.classList.add('added');
   } else {
     //alert('Hey, Already added !')
+    sliders.splice(item, 1);
+    element.classList.remove("added");
   }
 }
 var timer
@@ -69,8 +69,7 @@ const createSlider = () => {
   document.querySelector('.main').style.display = 'block';
   // hide image aria
   imagesArea.style.display = 'none';
-  // Problem Solved
-  const duration = document.getElementById('create-slider').value //|| 1000;
+  const duration = document.getElementById('create-slider').value || 1000;
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
